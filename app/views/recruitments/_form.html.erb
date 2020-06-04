@@ -1,0 +1,34 @@
+<%= form_with(model: @recruitment, local: true) do |form| %>
+    <% if @recruitment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= @recruitment.errors.count %>件のエラーがあります。</h2>
+      <ul>
+      <% @recruitment.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+    <% end %>
+    <%= form.label :今遊びますか？ %>
+    <%= form.text_field :play_now %>
+
+    <%= form.label :ゲームタイトル %>
+    <%= form.text_field :game_title %>
+
+    <%= form.label :コメント %>
+    <%= form.text_field :comment %>
+
+    <%= form.label :機種 %>
+    <%= form.text_field :machine %>
+
+    <%= form.label :写真 %>
+    <%= form.text_field :image %>
+
+    <%= form.label :オフライン？オンライン？ %>
+    <%= form.text_field :on_off %>
+
+    <%= form.label :目的 %>
+    <%= form.text_field :purpouse %>
+
+    <%= form.submit %>
+<% end %>

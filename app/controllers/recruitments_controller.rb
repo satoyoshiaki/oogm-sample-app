@@ -25,6 +25,10 @@ class RecruitmentsController < ApplicationController
           render :edit
         end
       end
+      def destroy
+        @recruitment.destroy
+        redirect_to recruitments_path, notice:"ブログを削除しました！"
+      end
       private
       def recruitment_params
         params.require(:blog).permit(:title, :content)

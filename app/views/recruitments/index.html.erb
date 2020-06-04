@@ -21,6 +21,7 @@
     <td><%= recruitment.purpouse %></td>
     <td><%= link_to '詳細を確認する', recruitment_path(recruitment.id) %></td>
     <td><%= link_to "編集する", edit_recruitment_path(recruitment.id) %></td>
+    <td><%= link_to '募集を削除する', recruitment_path(recruitment.id), method: :delete ,data: { confirm: '本当に削除していいですか？' } %></td>
   </tr>
 <% end %>
 </table>
