@@ -10,7 +10,7 @@
     <th>目的</th>
 
   </tr>
-<% @blogs.each do |blog| %>
+<% @recruitments.each do |recruitment| %>
   <tr>
     <td><%= recruitment.play_now %></td>
     <td><%= recruitment.game_title %></td>
@@ -19,6 +19,9 @@
     <td><%= recruitment.image %></td>
     <td><%= recruitment.on_off %></td>
     <td><%= recruitment.purpouse %></td>
+    <td><%= link_to '詳細を確認する', recruitment_path(recruitment.id) %></td>
   </tr>
 <% end %>
 </table>
+<br>
+<%= link_to '新しく募集する', new_recruitment_path %>
