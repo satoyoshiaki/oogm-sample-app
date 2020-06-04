@@ -1,4 +1,13 @@
 <%= form_with(model: @recruitment, local: true) do |form| %>
+    <% if @recruitment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= @recruitment.errors.count %>件のエラーがあります。</h2>
+      <ul>
+      <% @recruitment.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
     <%= form.label :今遊びますか？ %>
     <%= form.text_field :play_now %>
 
