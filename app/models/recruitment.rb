@@ -6,4 +6,6 @@ class Recruitment < ApplicationRecord
     validates :image, presence: true
     validates :on_off, presence: true
     validates :purpouse, presence: true
+    validates :comment,    length: { in: 1..250 }
+    validates :game_title,    length: { in: 1..30 }
 end
