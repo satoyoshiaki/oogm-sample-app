@@ -1,0 +1,24 @@
+<%= form_with(model: Recruitment.new, local: true) do |form| %>
+    <%= form.label :今遊びますか？ %>
+    <%= form.text_field :play_now %>
+
+    <%= form.label :ゲームタイトル %>
+    <%= form.text_field :game_title %>
+
+    <%= form.label :コメント %>
+    <%= form.text_field :comment %>
+
+    <%= form.label :機種 %>
+    <%= form.text_field :machine %>
+
+    <%= form.label :写真 %>
+    <%= form.text_field :image %>
+
+    <%= form.label :オフライン？オンライン？ %>
+    <%= form.text_field :on_off %>
+
+    <%= form.label :目的 %>
+    <%= form.text_field :purpouse %>
+
+    <%= form.submit %>
+<% end %>
