@@ -20,6 +20,7 @@
     <td><%= recruitment.on_off %></td>
     <td><%= recruitment.purpouse %></td>
     <td><%= link_to '詳細を確認する', recruitment_path(recruitment.id) %></td>
+    <td><%= link_to "編集する", edit_recruitment_path(recruitment.id) %></td>
   </tr>
 <% end %>
 </table>
