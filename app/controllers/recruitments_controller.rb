@@ -2,8 +2,6 @@ class RecruitmentsController < ApplicationController
     before_action :set_recruitment, only: [:show, :edit, :update, :destroy]
       def index
         @recruitments = Recruitment.all
-      end
-      def new
         @recruitment = Recruitment.new
       end
       def create
