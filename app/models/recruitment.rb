@@ -8,4 +8,5 @@ class Recruitment < ApplicationRecord
     validates :purpouse, presence: true
     validates :comment,    length: { in: 1..250 }
     validates :game_title,    length: { in: 1..30 }
+    validates :play_now, numericality: true
 end

@@ -9,7 +9,7 @@ class RecruitmentsController < ApplicationController
         if @recruitment.save
           redirect_to recruitments_path, notice: "募集を作成しました！"
         else
-          render :new
+          render :edit
         end
       end
       def show
