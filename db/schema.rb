@@ -15,20 +15,6 @@ ActiveRecord::Schema.define(version: 2020_06_04_073312) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "blogs", force: :cascade do |t|
-    t.string "title"
-    t.string "details"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "posts", force: :cascade do |t|
-    t.string "title"
-    t.string "details"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "recruitments", force: :cascade do |t|
     t.integer "play_now"
     t.string "game_title"

@@ -1,7 +1,7 @@
 class RecruitmentsController < ApplicationController
-    before_action :set_recruitment, only: [:show, :edit, :update]
-    def index
-        @recruitment = Recruitment.all
+    before_action :set_recruitment, only: [:show, :edit, :update, :destroy]
+      def index
+        @recruitments = Recruitment.all
       end
       def new
         @recruitment = Recruitment.new
@@ -9,7 +9,7 @@ class RecruitmentsController < ApplicationController
       def create
         @recruitment = Recruitment.new(recruitment_params)
         if @recruitment.save
-          redirect_to recruitment_path, notice: "ブログを作成しました！"
+          redirect_to recruitments_path, notice: "募集を作成しました！"
         else
           render :new
         end
@@ -20,18 +20,18 @@ class RecruitmentsController < ApplicationController
       end
       def update
         if @recruitment.update(recruitment_params)
-          redirect_to recruitments_path, notice: "ブログを編集しました！"
+          redirect_to recruitments_path, notice: "募集を編集しました！"
         else
           render :edit
         end
       end
       def destroy
         @recruitment.destroy
-        redirect_to recruitments_path, notice:"ブログを削除しました！"
+        redirect_to recruitments_path, notice:"募集を削除しました！"
       end
       private
       def recruitment_params
-        params.require(:blog).permit(:title, :content)
+        params.require(:recruitment).permit(:play_now, :game_title, :comment, :machine, :image, :on_off, :purpouse )
       end
       # idをキーとして値を取得するメソッドを追加
       def set_recruitment
