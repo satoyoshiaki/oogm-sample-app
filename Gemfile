@@ -66,3 +66,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'carrierwave'
 gem 'rmagick'
+#画像投稿のやつ
+gem 'devise'
+#ログインのやつ
