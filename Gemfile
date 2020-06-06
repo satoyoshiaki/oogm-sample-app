@@ -72,3 +72,7 @@ gem 'devise'
 #ログインのやつ
 gem 'devise-i18n'
 #翻訳のやつ
+gem 'rails_admin', '~> 2.0'
+#管理者のやつ
+gem 'cancancan'
+#管理者権限の権限
