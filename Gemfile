@@ -70,3 +70,5 @@ gem 'rmagick'
 #画像投稿のやつ
 gem 'devise'
 #ログインのやつ
+gem 'devise-i18n'
+#翻訳のやつ
